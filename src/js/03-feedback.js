@@ -1,9 +1,9 @@
 import localStorageApi from './localstorage';
 import throttle from 'lodash.throttle';
 
-formEl = document.querySelector('.feedback-form');
-inputEmailEl = document.querySelector('input');
-textareaEl = document.querySelector('textarea');
+const formEl = document.querySelector('.feedback-form');
+const inputEmailEl = document.querySelector('input');
+const textareaEl = document.querySelector('textarea');
 
 const FEEDBACK_FORM_KEY = 'feedback-data';
 const feedbackFormData = {};
@@ -31,7 +31,6 @@ function formInputValue() {
     return;
   }
 
-  console.log(inputValue);
   inputEmailEl.value = inputValue.email;
   textareaEl.value = inputValue.message;
 }
